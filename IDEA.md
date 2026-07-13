@@ -1,5 +1,6 @@
-# vinyl-app
+# Vinyl App — Idee de proiect
 
+## Concept
 Aplicație front-end pentru colecționarii de viniluri, unde utilizatorii își pot gestiona colecția personală de discuri de vinil: adăugare, căutare, organizare și vizualizare.
 
 ## Funcționalități principale
