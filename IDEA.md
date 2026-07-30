@@ -42,4 +42,3 @@ Aplicație front-end pentru colecționarii de viniluri, unde utilizatorii își 
 4. Implementare CRUD local pentru colecție
 5. Integrare API extern pentru date album
 
-test
