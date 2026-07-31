@@ -13,8 +13,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #14100f;
-      color: #f2ede7;
+      background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 40%, #1e2a5e 100%);
+      color: #f0edf9;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -32,17 +32,41 @@
       height: 6rem;
       margin: 0 auto 1.5rem;
       border-radius: 50%;
-      background: radial-gradient(circle at center, #14100f 0.6rem, #2a211d 0.65rem, #2a211d 1.2rem, #14100f 1.25rem, #14100f 1.4rem, #3d302a 1.45rem, #3d302a 3rem);
+      background: radial-gradient(circle at center, #1a0b2e 0.6rem, #4b2f8f 0.65rem, #4b2f8f 1.2rem, #1a0b2e 1.25rem, #1a0b2e 1.4rem, #6a4fd6 1.45rem, #6a4fd6 3rem);
+      box-shadow: 0 0 2rem rgba(106, 79, 214, 0.5);
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.25rem;
+      border-radius: 999px;
+      background: rgba(106, 79, 214, 0.2);
+      border: 1px solid rgba(106, 79, 214, 0.6);
+      color: #b8a8f5;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     h1 {
       font-size: 2rem;
       letter-spacing: 0.02em;
       margin-bottom: 0.75rem;
+      background: linear-gradient(90deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     p {
-      color: #b5a99f;
+      color: #c3b9e6;
       line-height: 1.5;
     }
   </style>
@@ -50,8 +74,9 @@
 <body>
   <main>
     <div class="disc"></div>
+    <span class="badge">Site în construcție</span>
     <h1>Vinyl App</h1>
-    <p>Gestionează-ți colecția de viniluri: adăugare, căutare, organizare și vizualizare.</p>
+    <p>Lucrăm la platforma pentru gestionarea colecției tale de viniluri. Revino în curând!</p>
   </main>
 </body>
 </html>
