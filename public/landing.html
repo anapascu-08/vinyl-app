@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinyl App — colecția ta de viniluri</title>
+  <meta name="description" content="Vinyl App — aplicație pentru colecționarii de viniluri: gestionează, filtrează și urmărește colecția ta de discuri.">
+  <meta property="og:title" content="Vinyl App">
+  <meta property="og:description" content="Aplicație pentru gestionarea colecției tale de viniluri.">
+  <meta property="og:type" content="website">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 40%, #1e2a5e 100%);
+      background-attachment: fixed;
+      color: #f0edf9;
+      min-height: 100vh;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .wrap {
+      max-width: 56rem;
+      margin: 0 auto;
+    }
+
+    header.hero {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .disc {
+      width: 6rem;
+      height: 6rem;
+      margin: 0 auto 1.5rem;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #1a0b2e 0.6rem, #4b2f8f 0.65rem, #4b2f8f 1.2rem, #1a0b2e 1.25rem, #1a0b2e 1.4rem, #6a4fd6 1.45rem, #6a4fd6 3rem);
+      box-shadow: 0 0 2rem rgba(106, 79, 214, 0.5);
+      animation: spin 6s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .disc { animation: none; }
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.25rem;
+      border-radius: 999px;
+      background: rgba(106, 79, 214, 0.2);
+      border: 1px solid rgba(106, 79, 214, 0.6);
+      color: #b8a8f5;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(90deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: #c3b9e6;
+      line-height: 1.6;
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #b8a8f5;
+      margin-bottom: 1.25rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      color: #c3b9e6;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(106, 79, 214, 0.35);
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      color: #f0edf9;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+    }
+
+    ol.roadmap {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    ol.roadmap li {
+      counter-increment: step;
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      color: #c3b9e6;
+      line-height: 1.5;
+    }
+
+    ol.roadmap li::before {
+      content: counter(step);
+      flex: none;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background: rgba(106, 79, 214, 0.25);
+      border: 1px solid rgba(106, 79, 214, 0.6);
+      color: #b8a8f5;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ol.roadmap li.done::before {
+      content: "✓";
+      background: rgba(96, 165, 250, 0.25);
+      border-color: rgba(96, 165, 250, 0.6);
+      color: #93c5fd;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .chip {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(167, 139, 250, 0.35);
+      color: #c3b9e6;
+      font-size: 0.82rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(106, 79, 214, 0.3);
+      padding-top: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #9a8fc4;
+    }
+
+    footer a {
+      color: #a78bfa;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="disc"></div>
+      <span class="badge">Site în construcție</span>
+      <h1>Vinyl App</h1>
+      <p class="lead">Platforma pentru gestionarea colecției tale de viniluri — adaugi discurile, le organizezi, le filtrezi și vezi ce spune colecția ta despre gusturile tale. Revino în curând!</p>
+    </header>
+
+    <section>
+      <h2>Ce va putea face</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Colecția mea</h3>
+          <p>Toate vinilurile deținute, cu artist, album, an, gen, stare și copertă.</p>
+        </div>
+        <div class="card">
+          <h3>Adăugare rapidă</h3>
+          <p>Formular manual sau căutare prin Discogs / MusicBrainz pentru autocompletarea datelor și a copertei.</p>
+        </div>
+        <div class="card">
+          <h3>Filtrare și sortare</h3>
+          <p>După artist, gen, an, stare sau preț — plus o bară de căutare globală.</p>
+        </div>
+        <div class="card">
+          <h3>Wishlist</h3>
+          <p>Listă separată cu albumele pe care le vânezi.</p>
+        </div>
+        <div class="card">
+          <h3>Detalii album</h3>
+          <p>Tracklist, notițe personale și rating pentru fiecare disc.</p>
+        </div>
+        <div class="card">
+          <h3>Statistici</h3>
+          <p>Număr total de viniluri, distribuție pe genuri și decenii, valoare estimată a colecției.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Planificat pentru mai târziu</h2>
+      <div class="chips">
+        <span class="chip">Cont de utilizator</span>
+        <span class="chip">Colecție publică partajabilă</span>
+        <span class="chip">Scanare cod de bare</span>
+        <span class="chip">Preview audio (Spotify)</span>
+        <span class="chip">Mod luminos / întunecat</span>
+        <span class="chip">Istoric ascultări</span>
+        <span class="chip">Tracking valoare de piață</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stadiu</h2>
+      <ol class="roadmap">
+        <li class="done">Definirea conceptului și a funcționalităților</li>
+        <li>Schema de date pentru un album</li>
+        <li>Wireframe pentru paginile principale</li>
+        <li>Setup proiect (Vite + React + Tailwind)</li>
+        <li>CRUD local pentru colecție</li>
+        <li>Integrare API extern pentru date album</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Tehnologii</h2>
+      <div class="chips">
+        <span class="chip">React (Vite)</span>
+        <span class="chip">Tailwind CSS</span>
+        <span class="chip">Zustand / Context API</span>
+        <span class="chip">Discogs API</span>
+        <span class="chip">LocalStorage → Supabase</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>Proiect personal, în dezvoltare. Codul e pe <a href="https://github.com/anapascu-08/vinyl-app">GitHub</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>
