@@ -49,6 +49,16 @@ export default {
   'wishlist.empty.body': 'Adaugă un album și marchează-l ca „pe lista de dorințe" în formular.',
   'wishlist.empty.add': 'Adaugă un album',
 
+  'footer.browse': 'Navigare',
+  'footer.data': 'Date',
+  'footer.resources': 'Resurse',
+  'footer.export': 'Exportă JSON',
+  'footer.demo': 'Încarcă date demo',
+  'footer.grading': 'Ghid de stări (Goldmine)',
+  'footer.terms': 'Termeni și condiții',
+  'footer.localOnly': 'Datele rămân în acest browser.',
+  'footer.newTab': 'se deschide într-o filă nouă',
+
   'filter.genre': 'Gen',
   'filter.decade': 'Decadă',
   'filter.condition': 'Stare',

@@ -6,6 +6,7 @@ import { Stats } from './pages/Stats.jsx'
 import { AlbumDetail } from './pages/AlbumDetail.jsx'
 import { AlbumFormPage } from './pages/AlbumFormPage.jsx'
 import { NotFound } from './pages/NotFound.jsx'
+import { Terms } from './pages/Terms.jsx'
 
 // HashRouter: GitHub Pages nu poate servi rute profunde fără configurare de server.
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/add" element={<AlbumFormPage mode="create" />} />
           <Route path="/album/:id" element={<AlbumDetail />} />
           <Route path="/album/:id/edit" element={<AlbumFormPage mode="edit" />} />
+          <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -170,8 +170,13 @@ Aceeași structură ca `/`, filtrată pe `status === "wishlist"`. Fiecare card a
 
 **Stare goală:** dacă nu există discuri, mesaj + link spre adăugare, fără grafice.
 
-### 4.6 Navigație globală
-Header persistent: logo/nume, linkuri către Colecție · Wishlist · Statistici, buton „Adaugă album", meniu cu Export/Import JSON.
+### 4.6 `/terms` — Termeni și condiții
+Pagină statică, cu conținut separat pe limbi (`src/i18n/terms.js`): ce este aplicația, unde se salvează datele și că se pot pierde, lipsa garanțiilor, cum se obțin valorile, proprietatea asupra conținutului adăugat, copertele generate, linkurile externe și modificările. Afișează data ultimei actualizări.
+
+### 4.7 Navigație globală
+Header persistent: logo/nume, linkuri către Colecție · Wishlist · Statistici, comutator de limbă, meniu cu Export/Import JSON, buton de adăugare album.
+
+Footer pe toate paginile, cu trei grupuri de linkuri pe câte un rând — navigare internă, acțiuni pe date (export, date demo) și resurse externe (Discogs, MusicBrainz, ghidul Goldmine de stări) — plus un rând final cu linkul către Termeni și condiții. Linkurile externe se deschid în filă nouă, cu `rel="noopener noreferrer"`.
 
 ---
 

@@ -79,6 +79,7 @@ Toată logica testabilă stă în `src/lib/` și e acoperită de teste; componen
 | `#/add` | Adăugare album |
 | `#/wishlist` | Wishlist |
 | `#/stats` | Statistici |
+| `#/terms` | Termeni și condiții |
 
 Se folosește `HashRouter` pentru că GitHub Pages nu poate servi rute profunde fără configurare de server.
 

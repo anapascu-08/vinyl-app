@@ -5,6 +5,7 @@ import { DataMenu } from './DataMenu.jsx'
 import { Toasts } from './Toasts.jsx'
 import { StorageBanner } from './StorageBanner.jsx'
 import { LanguageSwitch } from './LanguageSwitch.jsx'
+import { Footer } from './Footer.jsx'
 import { useI18n } from '../i18n/index.js'
 import { StableText } from './StableText.jsx'
 import logo from '../assets/save-the-vinyl.webp'
@@ -83,6 +84,8 @@ export function Layout() {
       <main id="content" className="mx-auto max-w-6xl px-4 py-8">
         <Outlet />
       </main>
+
+      <Footer />
 
       <Toasts />
     </div>

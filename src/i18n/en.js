@@ -49,6 +49,16 @@ export default {
   'wishlist.empty.body': 'Add a record and mark it as “on wishlist” in the form.',
   'wishlist.empty.add': 'Add a record',
 
+  'footer.browse': 'Browse',
+  'footer.data': 'Data',
+  'footer.resources': 'Resources',
+  'footer.export': 'Export JSON',
+  'footer.demo': 'Load demo data',
+  'footer.grading': 'Grading guide (Goldmine)',
+  'footer.terms': 'Terms and conditions',
+  'footer.localOnly': 'Your data stays in this browser.',
+  'footer.newTab': 'opens in a new tab',
+
   'filter.genre': 'Genre',
   'filter.decade': 'Decade',
   'filter.condition': 'Condition',
