@@ -176,7 +176,7 @@ Pagină statică, cu conținut separat pe limbi (`src/i18n/terms.js`): ce este a
 ### 4.7 Navigație globală
 Header persistent: logo/nume, linkuri către Colecție · Wishlist · Statistici, comutator de limbă, meniu cu Export/Import JSON, buton de adăugare album.
 
-Footer pe toate paginile, cu trei grupuri de linkuri pe câte un rând — navigare internă, acțiuni pe date (export, date demo) și resurse externe (Discogs, MusicBrainz, ghidul Goldmine de stări) — plus un rând final cu linkul către Termeni și condiții. Linkurile externe se deschid în filă nouă, cu `rel="noopener noreferrer"`.
+Footer pe toate paginile, cu trei grupuri de linkuri pe câte un rând — navigare internă, acțiuni pe date (export, date demo) și resurse externe (Discogs, Vinyl.com, ghidul Goldmine de stări) — plus un rând final cu linkul către Termeni și condiții. Linkurile externe se deschid în filă nouă, cu `rel="noopener noreferrer"`.
 
 ---
 

@@ -6,7 +6,7 @@ import { useI18n } from '../i18n/index.js'
 
 const RESOURCES = [
   { href: 'https://www.discogs.com', label: 'Discogs' },
-  { href: 'https://musicbrainz.org', label: 'MusicBrainz' },
+  { href: 'https://vinyl.com', label: 'Vinyl.com' },
   {
     href: 'https://support.discogs.com/hc/en-us/articles/360001566193-Database-Guidelines-14-Grading-And-Condition',
     key: 'footer.grading',
